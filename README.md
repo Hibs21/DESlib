@@ -1,9 +1,9 @@
 Test
 
 
-```
+```python
 # Train a pool of 10 classifiers
-model = CalibratedClassifierCV(Perceptron(max_iter=5))   
+model = CalibratedClassifierCV(Perceptron())   
 pool_classifiers = BaggingClassifier(model, n_estimators=10)
 pool_classifiers.fit(X_train, y_train)
 
