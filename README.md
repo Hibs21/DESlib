@@ -2,9 +2,11 @@ Test
 
 
 ```python
+from pythonds.des.knora_e import KNORAE
+from sklearn.ensemble import RandomForestClassifier
+
 # Train a pool of 10 classifiers
-model = CalibratedClassifierCV(Perceptron())   
-pool_classifiers = BaggingClassifier(model, n_estimators=10)
+pool_classifiers = RandomForestClassifier(n_estimators=10)
 pool_classifiers.fit(X_train, y_train)
 
 # Initialize the DES model
